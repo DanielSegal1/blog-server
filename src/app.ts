@@ -18,7 +18,7 @@ app.use('/likes', likesRouter);
 app.use('/users', usersRouter);
 app.use('/chats', chatsRouter);
 
-const uri = `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.NAME}`
+const uri = process.env.MONGODB_URI ?? `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.NAME}`
 const dbOptions = {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
