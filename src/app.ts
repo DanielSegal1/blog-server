@@ -25,7 +25,7 @@ const dbOptions = {
 	useFindAndModify: false
 };
 
-console.log(uri);
+console.log(uri, PORT);
 mongoose.connect(uri, dbOptions).then(() => {
 	console.log('Successfully connected to db');
 });
