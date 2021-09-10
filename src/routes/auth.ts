@@ -15,7 +15,9 @@ router.post('/signup', [
 		min: 5
 	}),
 	body('email').isEmail(),
-	body('password').isStrongPassword(),
+	body('password').isString().isLength({
+		min: 6
+	}),
 	validate
 ], controller.signup);
 
