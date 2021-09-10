@@ -4,7 +4,7 @@ import cors from 'cors';
 import { dbConfig } from './config';
 import { authRouter, friendshipsRouter, postsRouter, likesRouter, usersRouter, chatsRouter } from './routes';
 
-const PORT: string | number = process.env.port || 8080;
+const PORT: string | number = process.env.PORT || 8080;
 
 const app: Express = express();
 
